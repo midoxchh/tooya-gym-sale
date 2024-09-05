@@ -559,30 +559,57 @@ nav {
   cursor: pointer;
 }
 
+/* Ensure box-sizing is applied universally */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
 .footer__container {
   position: relative;
   display: grid;
-  grid-template-columns: 400px repeat(3, 1fr);
+  grid-template-columns: 1fr; /* Stack all columns vertically */
   gap: 2rem;
+  padding: 2rem 1rem;
+  max-width: 100%;
+  overflow: hidden; /* Ensure no overflow within the container */
+  text-align: center; /* Center-align text and items */
 }
 
+/* Handle the background blur */
 .footer__blur {
+  position: absolute;
   bottom: 0;
   right: 0;
 }
 
+/* Styling for the logo */
 .footer__logo {
   max-width: 150px;
+  margin: auto;
   margin-bottom: 2rem;
 }
 
+/* Ensure the image is visible */
+.footer__logo img {
+  max-width: 100%; /* Ensure image fits within its container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Description text in the footer */
 .footer__col p {
   margin-bottom: 2rem;
   color: var(--text-light);
 }
 
+/* Social icons styling */
 .footer__socials {
   display: flex;
+  justify-content: center; /* Center-align social icons */
   align-items: center;
   gap: 1rem;
 }
@@ -601,6 +628,7 @@ nav {
   background-color: var(--secondary-color);
 }
 
+/* Column headings */
 .footer__col h4 {
   margin-bottom: 2rem;
   font-size: 1.2rem;
@@ -608,6 +636,7 @@ nav {
   color: var(--white);
 }
 
+/* Links inside columns */
 .footer__col > a {
   display: block;
   margin-bottom: 1rem;
@@ -619,6 +648,7 @@ nav {
   color: var(--secondary-color);
 }
 
+/* Footer bottom bar */
 .footer__bar {
   max-width: var(--max-width);
   margin: auto;
@@ -626,6 +656,16 @@ nav {
   font-size: 0.8rem;
   color: var(--white);
 }
+
+/* Media Queries for Tablets and Mobile */
+@media (max-width: 768px) {
+  .footer__container {
+    grid-template-columns: 1fr; /* Maintain vertical stacking */
+    gap: 1rem;
+  }
+}
+
+
 #menunav{
   display: none;
 }
@@ -806,13 +846,6 @@ nav {
     flex-direction: column;
   }
 
-  .footer__container {
-    grid-template-columns: 1fr 150px;
-  }
-
-  .footer__bar {
-    text-align: center;
-  }
   .join__image{
     display: flex;
     flex-direction: column;
