@@ -1,0 +1,32 @@
+:root {
+    --primary-color: #111317;
+    --primary-color-light: #1f2125;
+    --primary-color-extra-light: #35373b;
+    --secondary-color: #E8DE25;
+    --secondary-color-dark: #d7cf2a;
+    --text-light: #d1d5db;
+    --white: #ffffff;
+    --max-width: 1200px;
+  }
+  .langue{
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    width: 100px;
+    height: 30px;
+    background-color: var(--secondary-color);
+    border-radius: 0px 0px 10px 10px;
+    text-align: center;
+    position: sticky;
+    z-index: 5;
+    top:0;
+}
+.langue div{
+    display: contents;
+}
+.langue div a{
+    color: #35373b;
+    font-size: large;
+    font-weight: 800;
+}
+
